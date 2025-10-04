@@ -1,0 +1,1195 @@
+body 
+{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f2f2c;
+  color: white;
+}
+
+/* Header */
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #0f2f2c;
+}
+.logo img
+{
+  height: 50px;
+}
+.nav
+{
+  display: flex;
+  gap: 15px;
+}
+.nav a
+{
+  color: white;
+  text-decoration: none;   /* fixed */
+  font-size: 20px;
+}
+.nav a:hover 
+{
+  color: gold;
+}
+
+/* Button */
+.book-btn 
+{
+  background-color: gold;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;   /* fixed */
+  border: 3px solid gold;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Arrow-down */
+.arrow-down 
+{
+  display: inline-block;
+  margin-left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6.5px solid gold;
+  vertical-align: middle;
+}
+
+/*Template 2 */
+/* Hero */
+.hero 
+{
+  text-align: center;
+  margin: auto;
+}
+.hero h1
+{
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.hero p 
+{
+  color: lightgray;
+  font-size: 16px;
+}
+.hero p span 
+{
+  color: gold;
+}
+.hero img 
+{
+  margin-top: 20px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 150px;
+  border: 5px solid gold;
+}
+.hero h4
+{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.hero h4 span {
+  color: gold;
+}
+
+/* Info */
+.info 
+{
+  text-align: center;
+  padding: 50px 20px;
+}
+.info h6 
+{
+  font-size: 15px;
+  margin-top: 10px;
+  color: gold;
+}
+.info p 
+{
+  margin-top: 10px;
+  color: lightgray;
+  font-size: 18px;   /* fixed (was 75px, too huge) */
+}
+.info p span 
+{
+  color: gold;
+}
+.info img 
+{
+  width: 10px;
+  height: auto;      /* fixed */
+  border-radius: 20px;
+  margin: 0 15px;
+}
+
+/*TEMPLATE 3 */
+.heading /* Heading */
+{
+  margin-bottom: 40px;
+}
+.heading h1 
+{
+  font-size: 55px;
+  color: #e7b559;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.heading h1 span 
+{
+  font-size: 50px;
+  color: #fff;
+}
+.heading h1 img 
+{
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+/* Content Row */
+.content 
+{
+  display: flex;
+  flex-direction: row;      /* left → center → right */
+  align-items: center;
+  justify-content: space-between; 
+  gap: 40px;
+  margin: 40px 0;
+  flex-wrap: nowrap;        /* don't allow wrapping */
+}
+
+/* Image containers */
+.content .image 
+{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content .image img 
+{
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* Text box in the center */
+.text-box 
+{
+  flex: 2;                 
+  max-width: 400px;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Left & Right image shapes */
+.left-img img 
+{
+  border-radius: 50% 50% 0 0; /* arch top */
+}
+.right-img img 
+{
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 45%;
+}
+
+/* About Us button */
+.btn 
+{
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #e7b559;
+  color: #e7b559;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover 
+{
+  background: #e7b559;
+  color: #0f2d27;
+}
+
+/* Reservation image */
+.reservation img 
+{
+  display: block;
+  margin: 20px auto;
+  width: 500px;
+  height: 500px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 70px;
+  object-fit: cover;
+}
+
+/*Template 4*/
+.menu-section /* MENU SECTION CONTAINER */
+{
+  position: relative;
+  margin: 50px auto;
+  padding: 60px 40px;
+  max-width: 1200px;
+  background: #0e4a40;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Gold corners */
+.menu-section::before,
+.menu-section::after
+{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(150deg, gold, transparent);
+  bottom: 0;
+  left: 0;
+  top:0;
+  border-top-left-radius: 10px;
+}
+.menu-section::after 
+{
+  top: 0;
+  right: 0;
+  left: auto;
+  background: linear-gradient(225deg, gold, transparent);
+  border-bottom-right-radius: 10px;
+}
+
+/* Subtle overlay */
+.menu-bg 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 0.1;
+}
+
+/*HEADING (top center) */
+.menu-heading 
+{
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+.menu-sub 
+{
+  font-size: 14px;
+  color: gold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.menu-icon 
+{
+  font-size: 28px;
+  color: gold;
+  margin: 8px 0;
+}
+.menu-title 
+{
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Georgia", serif;
+  margin: 0;
+}
+
+/*BODY LAYOUT*/
+.menu-body 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+  margin: 0%;
+}
+
+.menu-content
+{
+  flex: 2;
+  text-align: left;
+}
+
+.menu-image
+{
+  flex: 1;
+  text-align: right;
+}
+.menu-image img 
+{
+  max-width: 100%;
+  height: auto;
+  border-radius: 100px;
+}
+
+/* MENU ITEMS */
+.menu-items 
+{
+  position: relative;
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+.menu-items h3
+{
+  color: gold;
+  margin-bottom: 10px;
+}
+.menu-item 
+{
+  margin-bottom: 25px;
+}
+.menu-header 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dish-name 
+{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #fff;
+}
+.price 
+{
+  color: gold;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.dots 
+{
+  flex: 1;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+  margin: 0 10px;
+}
+.description 
+{
+  margin-top: 8px;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+/*Special Dishes Template--8*/
+.popular 
+{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #e7b559; 
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#special section 
+{
+  text-align: center;
+  padding-top: 60px;
+  background-color: #0f2f2c;
+  color: white;
+}
+
+.special-title 
+{
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.dish-row 
+{
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: flex-start;   /* align items to the top */
+  gap: 20px;                 /* space between cards */
+  flex-wrap: wrap;           /* allows wrapping on smaller screens */
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.dish-card 
+{
+  background: transparent;
+  border: 2px solid gold;
+  padding: 40px 20px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.dish-card:hover 
+{
+  transform: translateY(-10px);
+}
+
+.dish-card
+{
+  border-radius: 150px 150px 0 0; /* curved top */
+}
+.dish-card.first 
+{
+  border-radius: 150px 150px 150px 150px; /* top + bottom curved */
+}
+.dish-card.middle 
+{
+  border-radius: 150px 150px 0 0; /* curved top only */
+}
+.dish-card.last 
+{
+  border-radius: 150px 150px 150px 150px; /* top + bottom curved */
+}
+
+.dish-category 
+{
+  color: #e7b559;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.dish-image 
+{
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  background: #222;
+  border: 4px solid #e7b559;
+}
+.dish-title 
+{
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+.button-container 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px; 
+  font-size:20px;
+}
+.btn-view
+{
+  display: contents;
+  color: #e7b559;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Booking Table and Video Css Template 10*/
+.container 
+{
+  display: flex;
+  color: white;
+  min-height: 100vh;
+}
+
+.left-side 
+{
+  flex: 1;
+  background-color: #1a4a44;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1.5px solid gold;
+  border-right: 1.5px solid gold;
+  border-bottom: 1.5px solid gold;
+  border-top: 1.5px solid gold;
+}
+
+.right-side 
+{
+  flex: 1;
+  background-image: url('reservation.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.form-header h2 
+{
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.online-reservation-label
+{
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+.booking-text 
+{
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.form-row 
+{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input, select, textarea 
+{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #555;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.book-table-btn 
+{
+  width: 100%;
+  padding: 10px;
+  background-color: #d4a974;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.book-table-btn:hover 
+{
+  background-color: #c0966a;
+}
+
+.video-overlay 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button 
+{
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.contact-info 
+{
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* TEMPLATE 11 */
+.chef-section 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.chef-text
+{
+  max-width: 420px;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.chef-title /*For The Meet Chef Title*/
+{
+  color: #e7b559;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.chef-main /* For Experince Chef */
+{
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.chef-description /* For Chef Description */
+{
+  font-size: 19px;
+  color: #e8e6e3;
+  margin: 20px 0 38px;
+  line-height: 1.5;
+}
+.chef-button /* Meet Our Team Button */
+{
+  display: inline-block;
+  padding: 12px 38px;
+  font-size: 18px;
+  color: #e7b559;
+  border: 2px solid #e7b559;
+  background: transparent;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 0;
+}
+.chef-team:hover
+{
+  background: #e7b559;
+  color: #16312e;
+}
+.chef-images 
+{
+  display: grid;
+  grid-template-columns: 66% 34%; /* big + small */
+  grid-template-rows: 1fr 1fr;   /* two small stacked */
+  gap: 20px;
+  max-width: 700px;
+  position: relative;
+}
+.chef-main 
+{
+  grid-row: span 2; /* spans both rows */
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.chef-main img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+.chef-badge
+{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #d1b06b;
+  color: #0e2e28;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 18px;
+  border-radius: 50%;
+  border: 3px solid #0e2e28;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Side Images */
+.chef-images img 
+{
+  margin-top: 20px;
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+.chef-images .chef-extra 
+{
+ border-radius: 55%; /* perfect circle */
+  object-fit: cover;
+}
+
+/*TEMPLATE 12*/
+/* Section Layout */
+.testimonial-section 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  background: url('testimonial-bg1.jpg') no-repeat center/cover;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+/* Left + Right Stats */
+.testimonial-left, .testimonial-right 
+{
+  flex: 1;
+}
+
+.testimonial-left h2,
+.testimonial-right h2 
+{
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.testimonial-left p,
+.testimonial-right p 
+{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+
+/* Center Content */
+.testimonial-center 
+{
+  flex: 2;
+}
+
+.testimonial-title 
+{
+  font-size: 16px;
+  color: #e7b559;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.testimonial-heading 
+{
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.testimonial-box
+{
+  background: rgba(14, 46, 40, 0.9);
+  border: 2px solid #e7b559;
+  border-radius: 40px;
+  padding: 40px 30px 70px;
+  position: relative;
+}
+
+.testimonial-box p 
+{
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e8e6e3;
+}
+
+/* Profile Images */
+.testimonial-profiles 
+{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile img 
+{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #e7b559;
+  object-fit: cover;
+}
+
+/* Profile Name */
+.testimonial-name 
+{
+  margin-top: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e7b559;
+  letter-spacing: 2px;
+}
+
+/*Template 13 */
+.insta-section
+{
+  padding-top: 50px;
+  text-align: center;
+  color: #e8dfc7;
+}
+.insta-section h1
+{
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+.gallery
+{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+.gallery-items
+{
+  background: #263a36;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  max-width: 320px;
+  transition: transform .2s cubic-bezier(.19,.96,.61,1.24);
+  border: 2px solid #3a574d;
+}
+.gallery-items img
+{
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #2e4e43;
+}
+
+@media (max-width: 900px) /* When the screen is smaller than 900px */
+{
+  .gallery /* Gallery spacing */
+  {
+    gap: 25px;   /* space between gallery items */
+  }
+  .insta-section h1   /* Heading in Instagram section */
+  {
+    font-size: 2.2rem;  /* make the text smaller */
+  }
+  .gallery-item /* Gallery box size */ 
+  {
+    max-width: 220px;   /* don't let it be bigger than 220px */
+  }
+  .gallery-item img /* Images inside gallery */ 
+  {
+    height: 150px;      /* fix the height of images */
+  }
+}
+
+
+@media (max-width: 600px) /* When the screen is smaller than 600px (like phones) */
+{
+  .gallery /* Make gallery items go top-to-bottom (not side-by-side) */
+  {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center them */
+    gap: 18px;                /* smaller gap */
+  }
+ .insta-section h1 /* Heading gets even smaller */
+  {
+    font-size: 1.4rem;
+  }
+  .gallery-item /* Gallery box should fill almost the whole screen width */
+  {
+    max-width: 98vw;   /* vw = viewport width */
+  }
+}
+
+/*Template 14 */
+.contact-section 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 50px 8%;
+  flex-wrap: wrap;
+  min-height: 450px;
+}
+
+/* Left & Right Images */
+.contact-section .image-box 
+{
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.contact-section .image-box img 
+{
+  width: 150%;
+  height: auto;
+  border-radius: 50% / 35%; /* Oval shape */
+  border: 2px solid gold;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Center Content */
+.contact-section .contact-content 
+{
+  flex: 2;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section .contact-content .logo img 
+{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact-section h3 
+{
+  font-size: 20px;
+  color: gold;
+  margin: 15px 0 10px;
+}
+
+.contact-section h2 
+{
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-section p 
+{
+  margin: 6px 0;
+  font-size: 16px;
+  color: #eee;
+}
+
+/* Divider */
+.contact-section .divider 
+{
+  width: 80px;
+  height: 3px;
+  background: gold;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* Newsletter */
+.contact-section .newsletter 
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-section .newsletter input 
+{
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  max-width: 280px;
+}
+.contact-section .newsletter button 
+{
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: gold;
+  color: #0e4a40;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-section .newsletter button:hover 
+{
+  background: #fff;
+  color: #0e4a40;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) 
+{
+  .contact-section
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-section .image-box 
+  {
+    max-width: 90%;
+  }
+  .contact-section .newsletter 
+  {
+    flex-direction: column;
+  }
+  .contact-section .newsletter input,
+  .contact-section .newsletter button 
+  {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/*Footer Template 15 */
+.footer {
+  background: #18322d;
+  padding: 20px 0;
+  color: #e5e3e8;
+  font-family: 'Poppins', Arial, sans-serif;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer-container 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left 
+{
+  font-size: 15px;
+  color: #b7b7b7;
+}
+
+.footer-icons 
+{
+  display: flex;
+  gap: 12px;   /* equal spacing, no extra gap at the end */
+}
+
+.footer-icons a 
+{
+  text-decoration: none;
+  color: #e5e3e8;
+  border: 1px solid #e5e3e8;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-icons a:hover 
+{
+  background: #e5e3e8;
+  color: #18322d;
+}
+
+.footer-right 
+{
+  font-size: 15px;
+  color: #b7b7b7;
+}
+
+/* LOGIN MODAL */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0,0,0,0.7); 
+}
+
+.modal-content {
+  background: #1a4a44;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  border: 2px solid gold;
+  color: white;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: gold;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid gold;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+  color: gold;
+}
